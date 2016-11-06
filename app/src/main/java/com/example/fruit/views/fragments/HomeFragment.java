@@ -58,7 +58,6 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getContext(), ThemSanPham.class));
             }
         });
-
         instance = this;
 
         return view;

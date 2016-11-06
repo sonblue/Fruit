@@ -60,7 +60,7 @@ public class ListSanPhamAdapter extends RecyclerView.Adapter<ListSanPhamAdapter.
         holder.imgAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopMenu(holder.imageView);
+//                showPopMenu(holder.imageView);
                 SanPhamModels sanpham  = HomeFragment.getInstance().searchPerson(sanPhamModel.get(position).getId());
                 HomeFragment.getInstance().addToCart(sanpham);
             }

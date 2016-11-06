@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.fruit.R;
@@ -20,6 +21,7 @@ public class ListGioHangAdapter extends BaseAdapter {
     private Context context;
     private List<GioHangModels> gioHangModelses;
     private LayoutInflater inflater;
+
 
     public ListGioHangAdapter (Context context, List<GioHangModels> gioHangModelses){
         this.context = context;
@@ -43,7 +45,7 @@ public class ListGioHangAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         if (inflater == null){
             inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
@@ -52,8 +54,27 @@ public class ListGioHangAdapter extends BaseAdapter {
         }
         TextView txtTenSP = (TextView)convertView.findViewById(R.id.txtTenSanPham);
         TextView txtGiaBan = (TextView)convertView.findViewById(R.id.txtGiaBan);
-        TextView txtSoLuong = (TextView)convertView.findViewById(R.id.txtSoLuong);
+        final TextView txtSoLuong = (TextView)convertView.findViewById(R.id.txtSoLuong);
+        ImageButton imgPlus = (ImageButton)convertView.findViewById(R.id.btnPlus);
+        ImageButton imgSub = (ImageButton)convertView.findViewById(R.id.btnRemove);
 
+        imgPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                GioHangModels gioHangModels = GioHangFragment.getInstance().searchSanPham(gioHangModelses.get(position).getId());
+//                GioHangFragment.getInstance();
+                txtSoLuong.setText(Integer.parseInt(txtSoLuong.getText().toString())+1+"");
+//                GioHangModels gioHangModels = GioHangFragment.getInstance().searchSanPham(gioHangModelses.get(position).getId());
+//                GioHangFragment.getInstance().updateData(gioHangModels,txtSoLuong.getText().toString());
+            }
+        });
+        imgSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                txtSoLuong.setText(Integer.parseInt(txtSoLuong.getText().toString())-1+"");
+            }
+        });
 
         GioHangModels gioHang = gioHangModelses.get(position);
         txtTenSP.setText(gioHang.getTenSanPham());
