@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <ImageButton
+            android:id="@+id/imageAnh"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <EditText
+            android:id="@+id/edtTenSanPham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tên Sản Phẩm"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtXuatXu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Xuất Xứ"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtGiaBan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Giá Bán"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edtKhoiLuong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Khối Lượng"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edtThongTin"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:ems="10"
+            android:hint="Thông Tin"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</ScrollView>

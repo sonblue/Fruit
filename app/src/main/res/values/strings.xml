@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Fruit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Logout</string>
+
+
+    <string name="giaban">Giá Bán</string>
+    <string name="tensanpham">Tên Sản Phẩm</string>
+    <string name="xuatxu">Xuất Xứ</string>
+    <string name="thongtin">Thông Tin</string>
+    <string name="trongluong">Khối Lượng</string>
+    <string name="soluong">Số Lượng</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallerry</string>
+    <string name="addtocart">Thêm Vào Giỏ Hàng</string>
+
+    <string name="link_login">Đã có tài khoản? Đăng Nhập</string>
+    <string name="link_register">Chưa có tài khoản? Đăng Ký</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sanpham_name">%1$s</string>
+    <string name="sanpham_xuatxu">%1$s</string>
+    <string name="sanpham_giaban">%1$s</string>
+    <string name="sanpham_khoiluong">%1$s</string>
+    <string name="sanpham_ThongTin">%1$s</string>
+</resources>
